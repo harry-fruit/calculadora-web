@@ -10,7 +10,8 @@
         html, body{
             font-size: 16px;
             font-family: sans-serif;
-            overflow: hidden;
+            /*overflow: hidden;*/
+
     }
         @media (min-width:451px){
             .body{
@@ -73,8 +74,8 @@
                 margin-top: 2em;
                 color: rgb(185, 179, 156);
                 width: 120%;
-                height: 240px;
-                border-radius:30%;
+                height: 50px;
+                border-radius:20%;
                 background-color: black;
                 grid-column: col-start 2/ col-end 3;
                 text-align: center;
@@ -183,6 +184,8 @@
             document.querySelector('#printer').innerHTML = currentValue
         }
 
+        //power
+
     </script>
     <title>Calculadora</title>
 </head>
@@ -217,6 +220,7 @@
     document.querySelector('.dot').onclick = () => addValue('.')
     document.querySelector('.rightRoundBrackets').onclick = () => addValue(')')
     document.querySelector('.leftRoundBrackets').onclick = () => addValue('(')
+    document.querySelector('.power').onclick = () => addValue('**')
     document.querySelector('.equal').onclick = () => calcularResultado()
     document.querySelector('.factorial').onclick = () => factorial(document.querySelector('#printer').innerText)
     
