@@ -29,7 +29,7 @@ function factorial (numero){
     }
     document.querySelector('#printer').innerHTML = currentValue
     }else{
-        alert('Primeiro insira um valor')       
+        alert('Primeiramente insira um valor')       
     }
 }
 
