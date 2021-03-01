@@ -22,10 +22,14 @@ function calcularResultado(){
 
 //factorial
 function factorial (numero){
-    let currentValue = 1
+    if(numero){
+        let currentValue = 1
     for(let i = 1; i <= numero; i++){
         currentValue *= i
     }
     document.querySelector('#printer').innerHTML = currentValue
+    }else{
+        alert('Primeiro insira um valor')       
+    }
 }
 
