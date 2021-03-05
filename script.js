@@ -1,17 +1,33 @@
+function operations(){
+    const but = document.getElementsByClassName('btt')
+    
+    for(let i = 0; i < but.length; i++){
+        document.getElementsByClassName('btt')[i].addEventListener('click', e=>{
+            const currentValue = document.querySelector('#printer').innerText
+            const newValue = but[i].innerText
+            const newValue = but[i].innerText  
+            if(currentValue.length == 50){
+                document.querySelector('#printer') = currentValue
+            }else{
+                document.querySelector('#printer').innerHTML = currentValue.concat(newValue)
+            }
+        })
+    }
+}
+
+operations()
+ 
+ 
  //DeleteData
  function apagarInfo (){
     document.getElementById('printer').innerHTML = ''
 }
 
-<<<<<<< Updated upstream
+
 // Add Value
 function addValue(data){
     const newValor = data
     const currentValue = document.getElementsByTagName('p')[0].innerText
-=======
-function addValue(data){
-    const newValor = data
-    const currentValue = document.getElementsByTagName('p')[0].innerText
 
     if(currentValue.length == 50){
         document.getElementById('printer').innerHTML = currentValue
@@ -20,19 +36,7 @@ function addValue(data){
     }
 }
 
-//power
- function power (){
-    const current = document.getElementById('printer').innerText
-    return document.getElementById('printer').innerHTML = current.concat(newValue)
-}
->>>>>>> Stashed changes
 
-    if(currentValue.length == 50){
-        document.getElementById('printer').innerHTML = currentValue
-    }else{
-        document.getElementById('printer').innerHTML = currentValue.concat(newValor)
-    }
-}
 // = 
 function calcularResultado(){
     const resultado = document.getElementById('printer').innerText
