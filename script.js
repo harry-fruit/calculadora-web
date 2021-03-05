@@ -1,24 +1,4 @@
-function operations(){
-    const but = document.getElementsByClassName('btt')
-    
-    for(let i = 0; i < but.length; i++){
-        document.getElementsByClassName('btt')[i].addEventListener('click', e=>{
-            const currentValue = document.querySelector('#printer').innerText
-            const newValue = but[i].innerText
-            const newValue = but[i].innerText  
-            if(currentValue.length == 50){
-                document.querySelector('#printer') = currentValue
-            }else{
-                document.querySelector('#printer').innerHTML = currentValue.concat(newValue)
-            }
-        })
-    }
-}
-
-operations()
- 
- 
- //DeleteData
+//DeleteData
  function apagarInfo (){
     document.getElementById('printer').innerHTML = ''
 }
