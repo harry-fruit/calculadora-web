@@ -18,12 +18,12 @@
                 <p id="printer">
                 </p>
             </div>
-            <button class="c">C</button>                   <button class="mod">%</button>     <button class="mult">*</button>   <button class="div">/</button>
-            <button class="seven">7</button>               <button class="eight">8</button>   <button class="nine">9</button>   <button class="equal">=</button>
-            <button class="four">4</button>                <button class="five">5</button>    <button class="six">6</button>    <button class="less">-</button>
-            <button class="one">1</button>                 <button class="two">2</button>     <button class="three">3</button>  <button class="plus" id="plus">+</button>
-            <button class="factorial">N!</button>          <button class="zero">0</button>    <button class="power">N<sup>x</sup></button>     <button class="leftRoundBrackets">(</button>
-            <button class="rightRoundBrackets">)</button>  <button class="dot">.</button>
+            <button class="c">C</button>                   <button class="btt">%</button>       <button class="btt">*</button>                   <button class="btt">/</button>
+            <button class="btt">7</button>                 <button class="btt">8</button>       <button class="btt">9</button>                   <button class="equal">=</button>
+            <button class="btt">4</button>                 <button class="btt">5</button>       <button class="btt">6</button>                   <button class="btt">-</button>
+            <button class="btt">1</button>                 <button class="btt">2</button>       <button class="btt">3</button>                   <button class="btt" id="plus">+</button>
+            <button class="factorial">N!</button>          <button class="btt">0</button>       <button class="power">N<sup>x</sup></button>     <button class="btt">(</button>
+            <button class="btt">)</button>                 <button class="btt">.</button>
         </div>
     </section>
     <footer>
@@ -33,29 +33,28 @@
 <script>
     //Clickers
     document.querySelector('.c').onclick = () => apagarInfo()
-    document.querySelector('.mod').onclick = () => addValue('%')
-    document.querySelector('.mult').onclick = () => addValue('*')
-    document.querySelector('.div').onclick = () => addValue('/')
-    document.querySelector('.plus').onclick = () => addValue('+')
-    document.querySelector('.less').onclick = () => addValue('-')
-    document.querySelector('.dot').onclick = () => addValue('.')
-    document.querySelector('.rightRoundBrackets').onclick = () => addValue(')')
-    document.querySelector('.leftRoundBrackets').onclick = () => addValue('(')
-    document.querySelector('.power').onclick = () => addValue('**')
     document.querySelector('.equal').onclick = () => calcularResultado()
+    document.querySelector('.power').onclick = () => power('**')
     document.querySelector('.factorial').onclick = () => factorial(document.querySelector('#printer').innerText)
     
     //Clickers -- numeros
-    document.querySelector('.seven').onclick = () => addValue(7)
-    document.querySelector('.eight').onclick = () => addValue(8)
-    document.querySelector('.nine').onclick = () => addValue(9)
-    document.querySelector('.four').onclick = () => addValue(4)
-    document.querySelector('.five').onclick = () => addValue(5)
-    document.querySelector('.six').onclick = () => addValue(6)
-    document.querySelector('.three').onclick = () => addValue(3)
-    document.querySelector('.two').onclick = () => addValue(2)
-    document.querySelector('.one').onclick = () => addValue(1)
-    document.querySelector('.zero').onclick = () => addValue(0)
+    function fixing (op){
+        const but = document.getElementsByClassName('btt')
+        
+        for(let i = 0; i < but.length; i++){
+            document.getElementsByClassName('btt')[i].addEventListener('click', e=>{
+                const currentValue = document.querySelector('#printer').innerText
+                const newValue = op || but[i].innerText
+                
+                if(currentValue.length == 50){
+                    document.querySelector('#printer') = currentValue
+                }else{
+                    document.querySelector('#printer').innerHTML = currentValue.concat(newValue)
+                }
+            })
+        }
+    }
+    fixing()
 </script>
 
 
