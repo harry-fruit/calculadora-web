@@ -3,10 +3,29 @@
     document.getElementById('printer').innerHTML = ''
 }
 
+<<<<<<< Updated upstream
 // Add Value
 function addValue(data){
     const newValor = data
     const currentValue = document.getElementsByTagName('p')[0].innerText
+=======
+function addValue(data){
+    const newValor = data
+    const currentValue = document.getElementsByTagName('p')[0].innerText
+
+    if(currentValue.length == 50){
+        document.getElementById('printer').innerHTML = currentValue
+    }else{
+        document.getElementById('printer').innerHTML = currentValue.concat(newValor)
+    }
+}
+
+//power
+ function power (){
+    const current = document.getElementById('printer').innerText
+    return document.getElementById('printer').innerHTML = current.concat(newValue)
+}
+>>>>>>> Stashed changes
 
     if(currentValue.length == 50){
         document.getElementById('printer').innerHTML = currentValue
