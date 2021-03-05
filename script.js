@@ -1,8 +1,25 @@
+<<<<<<< Updated upstream
 //DeleteData
+=======
+ // Add Value
+function addValue(data){
+    const newValor = data
+    const currentValue = document.getElementsByTagName('p')[0].innerText
+
+    if(currentValue.length == 50){
+        document.getElementById('printer').innerHTML = currentValue
+    }else{
+        document.getElementById('printer').innerHTML = currentValue.concat(newValor)
+    }
+}
+ 
+ //DeleteData
+>>>>>>> Stashed changes
  function apagarInfo (){
     document.getElementById('printer').innerHTML = ''
 }
 
+<<<<<<< Updated upstream
 
 // Add Value
 function addValue(data){
@@ -17,6 +34,8 @@ function addValue(data){
 }
 
 
+=======
+>>>>>>> Stashed changes
 // = 
 function calcularResultado(){
     const resultado = document.getElementById('printer').innerText
