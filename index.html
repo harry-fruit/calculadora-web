@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,12 +36,9 @@
     document.querySelector('.equal').onclick = () => calcularResultado()
     document.querySelector('.power').onclick = () => addValue('**')
     document.querySelector('.factorial').onclick = () => factorial(document.querySelector('#printer').innerText)
-
-    function operations(){
-    const but = document.getElementsByClassName('btt')
     
     //Clickers -- numeros
-    function fixing (){
+    function fixing (op){
         const but = document.getElementsByClassName('btt')
         
         for(let i = 0; i < but.length; i++){
@@ -57,10 +54,7 @@
             })
         }
     }
-}
-
-operations()
-
+    fixing()
 </script>
 
 
