@@ -1,4 +1,8 @@
- // Add Value
+ //DeleteData
+ function apagarInfo (){
+    document.getElementById('printer').innerHTML = ''
+}
+
 function addValue(data){
     const newValor = data
     const currentValue = document.getElementsByTagName('p')[0].innerText
@@ -8,11 +12,6 @@ function addValue(data){
     }else{
         document.getElementById('printer').innerHTML = currentValue.concat(newValor)
     }
-}
- 
- //DeleteData
- function apagarInfo (){
-    document.getElementById('printer').innerHTML = ''
 }
 
 // = 
