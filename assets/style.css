@@ -1,10 +1,176 @@
-html, body{
+* {
     font-size: 16px;
-    font-family: sans-serif;
-    /*overflow: hidden;*/
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr 5vh;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+
+#cabecalho{
+    grid-area: header;
+    background-color: #1867c0;
+}
+
+#principal{
+    grid-area: main;
+    height: calc(100vh - 15vh);
+    background-color: #f0f0f0;
+    display: grid;
 
 }
-@media (min-width:451px){
+
+#rodape{
+    grid-area:footer;
+    background-color: rgba(19, 18, 18, 0.925);
+    text-align: center;
+    color: rgb(185, 179, 156);   
+}
+
+#corpoCalc{
+    background-color: red;
+    width: 80vw;
+    margin: 5vh 10vw;
+    padding: 25px 4% 25px 2%;
+    border-radius: 20px;
+    display: grid;
+    row-gap: 0.5vh;
+    column-gap: 0.5vw;
+    grid-template-rows: 16% repeat(6, 1fr);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "display display display display"
+    "delete  modulo  multi  divi"
+    "sete    oito    nove   igual"
+    "quatro  cinco   seis   menos"
+    "um      dois    tres   plus"
+    "fator   zero    power  plus"
+    "abre    fecha   ponto  plus";    
+}
+
+.btt, .fixingEffects{
+    border: 2px solid rgba(49, 48, 48, 0.863);
+    border-radius: 5px;
+}
+
+/* Botoes grid */
+#display{
+    grid-area: display;
+    text-align:right;
+    border-bottom: 2px solid rgba(49, 48, 48, 0.863);
+    border-right: 2px solid rgba(49, 48, 48, 0.863);
+    border-radius:10px;
+    background: linear-gradient(360deg, #eee, #ccc);
+    background-position: bottom ;
+}
+
+.zero{
+    grid-area: zero;
+}
+.um{
+    grid-area: um;
+}
+.dois{
+    grid-area: dois;
+}
+.tres{
+    grid-area: tres;
+}
+.quatro{
+    grid-area: quatro;
+}
+.cinco{
+    grid-area: cinco;
+}
+.seis{
+    grid-area: seis;
+}
+.sete{
+    grid-area: sete;
+}
+.oito{
+    grid-area: oito;
+}
+.nove{
+    grid-area: nove;
+}
+.c{
+    grid-area: delete;
+}
+.modulo{
+    grid-area: modulo;
+}
+.multi{
+    grid-area: multi;
+}
+.divi{
+    grid-area: divi;
+}
+
+.equal{
+    grid-area: igual;
+}
+.menos{
+    grid-area: menos;
+}
+#plus{
+    grid-area: plus;
+}
+.factorial{
+    grid-area: fator;
+}
+.direito{
+    grid-area: fecha;
+}
+.esquerdo{
+    grid-area: abre;
+}
+.ponto{
+    grid-area: ponto;
+}
+.power{
+    grid-area: power;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width:451px){
     .body{
         width: 85%;
         min-height: 280px;
@@ -139,4 +305,4 @@ html, body{
         grid-column: col-start 2/ col-end 4;
         text-align: center;
     }
-}
+} */
