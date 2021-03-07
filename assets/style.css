@@ -33,8 +33,8 @@ body{
 
 #navBar {
     position: absolute;
-    top: 30%;
-    left: 10vw;
+    top: 10%;
+    left: 18vw;
 }
 
 #navBar > li{
