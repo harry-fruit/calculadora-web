@@ -195,19 +195,58 @@ body{
     top: 10px;
 }
 
-@media(max-width:740px){
+@media(max-width:780px){
     body{
         grid-template-rows: 20vh 1fr 7vh;
     }
 
     #cabecalho{
-        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #logo{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    #navBar{
+        display: inline-block;
+        align-self: center;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    #navBar > a {
+        margin-left: 10px;
+        font-size: 1.5em;;
+        padding: 2px 5px;
+    }
+
+    #principal{
+        height: calc(100vh - 27vh);
+    }
+
+    #corpoCalc{
+        width: 65vw;
+    }
+}
+
+@media(max-width:380px){
+    body{
+        grid-template-rows: 20vh 1fr 7vh;
+    }
+
+    #cabecalho{
         flex-direction: column;
         justify-content: center;
     }
 
     #principal{
         height: calc(100vh - 27vh);
+    }
+    
+    #corpoCalc{
+        width: 70vw;
     }
 
     #logo{
@@ -225,10 +264,7 @@ body{
     #navBar > a {
         margin-left: 10px;
         font-size: 1em;;
-        padding: 3px;
+        padding: 2px 3px;
     }
 
-    #corpoCalc{
-        width: 70vw;
-    }
 }
