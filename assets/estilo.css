@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 15vh 1fr 7vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "cabecalho"
+        "principal"
+        "footer";
+}
+
+#cabecalho{
+    grid-area: cabecalho;
+    background-color: #7706a3;
+    display:flex;
+    flex-direction: row;
+    justify-content:left;
+    justify-items: center;
+    gap: 24px;
+    z-index: 1;
+    box-shadow: -1px 18px 39px -17px rgba(0,0,0,0.75);
+}
+
+#logo{
+    margin-left: 50px;
+    align-self: center;
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+}
+
+
+#navBar{
+    display: inline-block;
+    align-self: center;
+    margin-left: 40px;
+}
+#navBar > a {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.5em;;
+    color: white;
+}
+
+#principal{
+    grid-area: principal;
+    height: calc(100vh - 22vh);
+    background-color: #f0f0f0;
+    display: grid;
+}
+
+#corpoCalc{
+    background-color: rgba(78, 73, 73, 0.712);
+    width: 80vw;
+    margin: 2vh 10vw;
+    padding: 20px 3% 20px 1%;
+    border-radius: 20px;
+    display: grid;
+    row-gap: 0.5vh;
+    column-gap: 0.5vw;
+    grid-template-rows: 16% repeat(6, 1fr);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "display display display display"
+    "delete  modulo  multi  divi"
+    "sete    oito    nove   igual"
+    "quatro  cinco   seis   menos"
+    "um      dois    tres   plus"
+    "fator   zero    power  plus"
+    "abre    fecha   ponto  plus";    
+}
+
+/* Botoes grid */
+#display{
+    grid-area: display;
+    border-bottom: 2px solid rgba(49, 48, 48, 0.863);
+    border-right: 2px solid rgba(49, 48, 48, 0.863);
+    border-radius:10px;
+    background: linear-gradient(360deg, #eee, #ccc);
+    background-position: bottom ;
+    position: relative;
+}
+#printer{
+    font-weight: 300;
+    font-size: 24px;
+    text-align: right;
+    position:absolute;
+    right: 10px;
+    left: 0;
+    bottom: 0;
+    
+}
+
+.btt, .fixingEffects{
+    border: 2px solid rgba(49, 48, 48, 0.863);
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.zero{
+    grid-area: zero;
+}
+.um{
+    grid-area: um;
+}
+.dois{
+    grid-area: dois;
+}
+.tres{
+    grid-area: tres;
+}
+.quatro{
+    grid-area: quatro;
+}
+.cinco{
+    grid-area: cinco;
+}
+.seis{
+    grid-area: seis;
+}
+.sete{
+    grid-area: sete;
+}
+.oito{
+    grid-area: oito;
+}
+.nove{
+    grid-area: nove;
+}
+.c{
+    grid-area: delete;
+}
+.modulo{
+    grid-area: modulo;
+}
+.multi{
+    grid-area: multi;
+}
+.divi{
+    grid-area: divi;
+}
+
+.equal{
+    grid-area: igual;
+}
+.menos{
+    grid-area: menos;
+}
+#plus{
+    grid-area: plus;
+    background-color: #c0bcbc;
+    font-size: 30px;
+}
+.factorial{
+    grid-area: fator;
+}
+.direito{
+    grid-area: fecha;
+}
+.esquerdo{
+    grid-area: abre;
+}
+.ponto{
+    grid-area: ponto;
+}
+.power{
+    grid-area: power;
+}
+
+#rodape{
+    grid-area:footer;
+    background-color: rgba(19, 18, 18, 0.925);
+    text-align: center;
+    color: rgb(185, 179, 156);
+    position: relative;  
+}
+
+#rodape > p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+}
+
+@media(max-width:710px){
+    body{
+        grid-template-rows: 20vh 1fr 7vh;
+    }
+
+    #cabecalho{
+        display:flex;
+        flex-direction: column;
+    }
+
+    #principal{
+        height: calc(100vh - 27vh);
+    }
+
+    #logo{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    
+    #navBar{
+        display: inline-block;
+        align-self: center;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    #navBar > a {
+        margin-left: 10px;
+        font-size: 1em;;
+    }
+}
