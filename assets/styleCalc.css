@@ -24,7 +24,7 @@ body{
     justify-items: center;
     gap: 24px;
     z-index: 1;
-    box-shadow: -1px 18px 39px -17px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
 }
 
 #logo{
@@ -45,7 +45,7 @@ body{
 #navBar > a {
     border: 2px solid white;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     text-decoration: none;
     margin-left: 20px;
     font-size: 1.5em;;
@@ -195,7 +195,7 @@ body{
     top: 10px;
 }
 
-@media(max-width:710px){
+@media(max-width:740px){
     body{
         grid-template-rows: 20vh 1fr 7vh;
     }
@@ -225,6 +225,7 @@ body{
     #navBar > a {
         margin-left: 10px;
         font-size: 1em;;
+        padding: 3px;
     }
 
     #corpoCalc{
