@@ -1,3 +1,5 @@
 node_modules
 gulpfile.js
-src
+src/CSS
+src/img
+.vscode

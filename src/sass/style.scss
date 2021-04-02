@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    .cabecalho{
+        height: 15vh;
+        background: linear-gradient(90deg, $cor-roxo-claro 0%, $cor-roxo-medio 73%, $cor-roxo-escuro 100%);
+        display:flex;
+        flex-direction: row;
+        justify-content:left;
+        .logo{
+            margin-left: 50px;
+            align-self: center;
+            width: 30vw;
+            height: 17vh;
+            background-image: url(../assets/img/newLogo.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .navBar{
+            align-self: center;
+            a {
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 5px 10px;
+                text-decoration: none;
+                margin-left: 20px;
+                font-size: 1.5em;;
+                color: $cor-cinza-claro;
+                cursor: pointer;
+            }
+        }
+
+    }
+    
+    .principal{
+        height: calc(100vh - 22vh);
+        background-color: $cor-cinza-claro;
+        display: flex;
+        justify-content: center;
+        .corpoCalc{
+            background-color: $cor-cinza-escuro;
+            width: 50vw;
+            margin: 2vh 10vw;
+            padding: 20px 3% 20px 1%;
+            border-radius: 20px;
+            display: grid;
+            row-gap: 0.5vh;
+            column-gap: 0.5vw;
+            grid-template-rows: 16% repeat(6, 1fr);
+            grid-template-columns: repeat(4, 25%);
+            grid-template-areas: 
+            "display display display display"
+            "delete  modulo  multi  divi"
+            "sete    oito    nove   igual"
+            "quatro  cinco   seis   menos"
+            "um      dois    tres   plus"
+            "fator   zero    power  plus"
+            "abre    fecha   ponto  plus";
+            .display{
+                grid-area: display;
+                border-bottom: 2px solid rgba(49, 48, 48, 0.863);
+                border-right: 2px solid rgba(49, 48, 48, 0.863);
+                border-radius:10px;
+                background-color: #eee;
+                background-position: bottom ;
+                position: relative;
+                .printer{
+                    font-weight: 300;
+                    font-size: 1.8rem;
+                    text-align: right;
+                    position:absolute;
+                    right: 10px;
+                    left: 0;
+                    bottom: 0px;
+                    
+                }
+            }
+            .botao, .fixingEffects{
+                border: 2px solid $cor-cinza-escuro;
+                border-radius: 5px;
+                background-color: $cor-cinza-claro;
+                font-weight: 400;
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+            .zero{
+                grid-area: zero;
+            }
+            .um{
+                grid-area: um;
+            }
+            .dois{
+                grid-area: dois;
+            }
+            .tres{
+                grid-area: tres;
+            }
+            .quatro{
+                grid-area: quatro;
+            }
+            .cinco{
+                grid-area: cinco;
+            }
+            .seis{
+                grid-area: seis;
+            }
+            .sete{
+                grid-area: sete;
+            }
+            .oito{
+                grid-area: oito;
+            }
+            .nove{
+                grid-area: nove;
+            }
+            .c{
+                grid-area: delete;
+            }
+            .modulo{
+                grid-area: modulo;
+            }
+            .multi{
+                grid-area: multi;
+            }
+            .divi{
+                grid-area: divi;
+            }
+            
+            .equal{
+                grid-area: igual;
+            }
+            .menos{
+                grid-area: menos;
+            }
+            #plus{
+                grid-area: plus;
+                background-color: $cor-cinza-medio;
+                font-size: 30px;
+            }
+            .factorial{
+                grid-area: fator;
+            }
+            .direito{
+                grid-area: fecha;
+            }
+            .esquerdo{
+                grid-area: abre;
+            }
+            .ponto{
+                grid-area: ponto;
+            }
+            .power{
+                grid-area: power;
+            } 
+        }
+    }
+    .rodape{
+        height: 7vh;
+        background-color: rgba(19, 18, 18, 0.925);
+        text-align: center;
+        color: $cor-cinza-medio;
+        p{
+            text-align: center;
+        }
+    }
+
+
+}
+
+@media(max-width:780px){
+    body{
+        grid-template-rows: 20vh 1fr 7vh;
+        .cabecalho{
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            .logo{
+                margin-left: 0;
+                margin-top: 5px;
+                width: 35vw;
+                height: 30vh;
+                background-image: url(../assets/img/newLogo.svg);
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: 25vh 30vw;
+            }
+            .navBar{
+                display: block;
+                margin-left: 0;
+                margin-bottom: 15px;
+                a {
+                    margin-left: 10px;
+                    font-size: 1.15em;
+                    padding: 2px 5px;
+                }
+            }
+
+            .principal{
+                height: calc(100vh - 27vh);
+                .corpoCalc{
+                    width: 65vw;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:380px){
+    body{
+        grid-template-rows: 20vh 1fr 7vh;
+        .cabecalho{
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            .logo{
+                margin-left: 0;
+                margin-top: 5px;
+                width: 35vw;
+                height: 30vh;
+                background-image: url(../assets/img/newLogo.svg);
+                background-repeat: no-repeat;
+                background-position:center;
+                background-size: 25vh 30vw;
+                .navBar{
+                    align-self: center;
+                    margin-left: 0;
+                    margin-bottom: 15px;
+                    a {
+                        margin-left: 10px;
+                        font-size: 1em;
+                        padding: 2px 3px;
+                    }
+                }
+            }
+        }
+        .principal{
+            height: calc(100vh - 27vh);
+            .corpoCalc{
+                width: 70vw;
+            }
+        }
+    }
+
+}
