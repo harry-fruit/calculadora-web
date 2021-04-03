@@ -14,27 +14,44 @@ body{
         background: linear-gradient(90deg, $cor-roxo-claro 0%, $cor-roxo-medio 73%, $cor-roxo-escuro 100%);
         display:flex;
         flex-direction: row;
-        justify-content:left;
+        justify-content:space-between;
+        padding: 20px;
+        
         .logo{
             margin-left: 50px;
             align-self: center;
             width: 30vw;
             height: 17vh;
-            background-image: url(../assets/img/newLogo.svg);
+            background-image: url(../img/newLogo.svg);
             background-repeat: no-repeat;
             background-position: center;
         }
         .navBar{
             align-self: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            max-width: 60%;
+            font-size: 1.7em;
             a {
+                width: 130px;
+                height: 70px;
                 border: 2px solid white;
                 border-radius: 10px;
-                padding: 5px 10px;
+                padding: 6px 12px;
                 text-decoration: none;
-                margin-left: 20px;
-                font-size: 1.5em;;
+                text-align: center;
                 color: $cor-cinza-claro;
                 cursor: pointer;
+            }
+            a:hover{
+                transition: all 0.5s;
+                background-color: $cor-cinza-claro;
+                color: $cor-roxo-escuro;
             }
         }
 
@@ -167,8 +184,11 @@ body{
         background-color: rgba(19, 18, 18, 0.925);
         text-align: center;
         color: $cor-cinza-medio;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         p{
-            text-align: center;
+            font-size: 1.2em;
         }
     }
 
@@ -177,72 +197,64 @@ body{
 
 @media(max-width:780px){
     body{
-        grid-template-rows: 20vh 1fr 7vh;
         .cabecalho{
-            flex-direction: column;
-            justify-content: center;
-            gap: 0;
+            
             .logo{
                 margin-left: 0;
                 margin-top: 5px;
-                width: 35vw;
-                height: 30vh;
-                background-image: url(../assets/img/newLogo.svg);
+                background-image: url(../img/newLogo.svg);
                 background-repeat: no-repeat;
                 background-position:center;
                 background-size: 25vh 30vw;
             }
             .navBar{
-                display: block;
-                margin-left: 0;
-                margin-bottom: 15px;
+                flex-basis: none;
+                font-size: 1.2em;
+                max-width: 60%;
+                gap: 10px;
                 a {
-                    margin-left: 10px;
-                    font-size: 1.15em;
-                    padding: 2px 5px;
+                    width: 95px;
+                    height: 50px;
+                    padding: 4px 8px;
                 }
             }
-
-            .principal{
-                height: calc(100vh - 27vh);
-                .corpoCalc{
-                    width: 65vw;
-                }
+        }
+        .principal{
+            height: calc(100vh - 22vh);
+            .corpoCalc{
+                width: 75vw;
             }
         }
     }
 }
 
-@media(max-width:380px){
+@media(max-width:360px){
     body{
-        grid-template-rows: 20vh 1fr 7vh;
         .cabecalho{
-            flex-direction: column;
-            justify-content: center;
-            gap: 0;
             .logo{
                 margin-left: 0;
                 margin-top: 5px;
-                width: 35vw;
-                height: 30vh;
-                background-image: url(../assets/img/newLogo.svg);
+                background-image: url(../img/newLogo.svg);
                 background-repeat: no-repeat;
                 background-position:center;
                 background-size: 25vh 30vw;
-                .navBar{
-                    align-self: center;
-                    margin-left: 0;
-                    margin-bottom: 15px;
-                    a {
-                        margin-left: 10px;
-                        font-size: 1em;
-                        padding: 2px 3px;
-                    }
+                }
+            
+            .navBar{
+                flex-basis: none;
+                font-size: 0.8em;
+                gap: 5px;
+                max-width: 60%;
+                a {
+                    border-radius: 7px;
+                    width: 70px;
+                    height: 25px;
+                    padding: 1px 2px;
                 }
             }
         }
         .principal{
-            height: calc(100vh - 27vh);
+            height: calc(100vh - 22vh);
             .corpoCalc{
                 width: 70vw;
             }

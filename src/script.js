@@ -1,20 +1,22 @@
+const printer = document.querySelector('#printer')
 const armazemDeFuncoes = {
+    printer: document.querySelector('#printer'),
     apagarInfo (){
-        document.getElementById('printer').innerHTML = ''
+        this.printer.innerHTML = ''
     },
     addValue(data){
         const newValor = data
         const currentValue = document.getElementsByTagName('p')[0].innerText
     
         if(currentValue.length == 50){
-            document.getElementById('printer').innerHTML = currentValue
+            this.printer.innerHTML = currentValue
         }else{
-            document.getElementById('printer').innerHTML = currentValue.concat(newValor)
+            this.printer.innerHTML = currentValue.concat(newValor)
         }
     },
     calcularResultado(){
-        const resultado = document.getElementById('printer').innerText
-            document.getElementById('printer').innerHTML = eval(resultado)
+        const resultado = this.printer.innerText
+            this.printer.innerHTML = eval(resultado)
     },
     factorial (numero){
         if(numero){
@@ -22,26 +24,23 @@ const armazemDeFuncoes = {
         for(let i = 1; i <= numero; i++){
             currentValue *= i
         }
-        document.querySelector('#printer').innerHTML = currentValue
+        this.printer.innerHTML = currentValue
         }else{
             alert('Primeiramente insira um valor')       
         }
     },
     clicaveis (){
-        const but = document.getElementsByClassName('botao')
+        const botaoHTMLCollection = document.getElementsByClassName('botao')
+        const botao = Array.from(botaoHTMLCollection)
         
-        for(let i = 0; i < but.length; i++){
-            document.getElementsByClassName('botao')[i].addEventListener('click', e=>{
-                const currentValue = document.querySelector('#printer').innerText
-                const newValue = but[i].innerText
-                
-                if(currentValue.length == 50){
-                    document.querySelector('#printer') = currentValue
-                }else{
-                    document.querySelector('#printer').innerHTML = currentValue.concat(newValue)
-                }
+        botao.forEach((elem, index) => {
+            elem.addEventListener('click', ()=>{
+                const currentValue = this.printer.innerText
+                const newValue = elem.innerText
+        
+                currentValue.length == 5 ? this.printer = this.printer : this.printer.innerHTML = currentValue.concat(newValue)
             })
-        }
+        })
     }
 }
 
