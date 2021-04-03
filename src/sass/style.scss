@@ -20,8 +20,8 @@ body{
         .logo{
             margin-left: 50px;
             align-self: center;
-            width: 30vw;
-            height: 17vh;
+            width: 190px;
+            height: 230px;
             background-image: url(../img/newLogo.svg);
             background-repeat: no-repeat;
             background-position: center;
@@ -31,20 +31,21 @@ body{
             display: flex;
             flex-direction: row;
             flex-wrap:wrap;
-            flex-basis: 100%;
             align-items: center;
             justify-content: flex-end;
             gap: 10px;
             max-width: 60%;
             font-size: 1.5em;
             a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 120px;
                 height: 70px;
                 border: 2px solid white;
                 border-radius: 10px;
-                padding: 6px 12px;
+                padding: 5px 10px;
                 text-decoration: none;
-                text-align: center;
                 color: $cor-cinza-claro;
                 cursor: pointer;
             }
@@ -205,7 +206,6 @@ body{
                 background-image: url(../img/newLogo.svg);
                 background-repeat: no-repeat;
                 background-position:center;
-                background-size: 25vh 30vw;
             }
             .navBar{
                 flex-basis: none;
@@ -237,7 +237,6 @@ body{
                 background-image: url(../img/newLogo.svg);
                 background-repeat: no-repeat;
                 background-position:center;
-                background-size: 25vh 30vw;
                 }
             
             .navBar{
