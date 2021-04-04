@@ -38,7 +38,7 @@ const armazemDeFuncoes = {
                 const currentValue = this.printer.innerText
                 const newValue = elem.innerText
         
-                currentValue.length == 50 ? this.printer = this.printer : this.printer.innerHTML = currentValue.concat(newValue)
+                currentValue.length == 15 ? this.printer = this.printer : this.printer.innerHTML = currentValue.concat(newValue)
             })
         })
     }
