@@ -14,16 +14,16 @@ body{
         background: linear-gradient(90deg, $cor-roxo-claro 0%, $cor-roxo-medio 73%, $cor-roxo-escuro 100%);
         display:flex;
         flex-direction: row;
-        justify-content:space-between;
-        padding: 20px;
+        align-items: center;
+        justify-content: center;
         
         .logo{
-            margin-left: 50px;
-            align-self: center;
-            width: 190px;
-            height: 230px;
-            background-image: url(../img/newLogo.svg);
+            width: 210px;
+            height: 100%;
+            background-image: url(../img/ID-Logo.png);
             background-repeat: no-repeat;
+            background-size: 100px;
+            object-fit: cover;
             background-position: center;
         }
         .navBar{
@@ -199,14 +199,6 @@ body{
 @media(max-width:780px){
     body{
         .cabecalho{
-            
-            .logo{
-                margin-left: 0;
-                margin-top: 5px;
-                background-image: url(../img/newLogo.svg);
-                background-repeat: no-repeat;
-                background-position:center;
-            }
             .navBar{
                 flex-basis: none;
                 font-size: 1.2em;
@@ -231,13 +223,10 @@ body{
 @media(max-width:360px){
     body{
         .cabecalho{
+            padding: 10px;
             .logo{
-                margin-left: 0;
-                margin-top: 5px;
-                background-image: url(../img/newLogo.svg);
-                background-repeat: no-repeat;
-                background-position:center;
-                }
+                background-size: 50px;
+            }
             
             .navBar{
                 flex-basis: none;

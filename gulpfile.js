@@ -34,7 +34,7 @@ function transformarJS (){
 }
 
 function copiarIMG (){
-    return gulp.src("./src/img/**/*.svg" )
+    return gulp.src("./src/img/**/*.*" )
     .pipe(gulp.dest("./build/assets/img"))
 }
 
